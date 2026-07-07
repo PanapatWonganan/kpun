@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-cream: #FFF7FB;
+  --color-tint: #FDEBF3;
+  --color-ink: #2B2530;
+  --color-ink-soft: #3F3A47;
+  --color-body: #5F5766;
+  --color-body-soft: #6C6474;
+  --color-muted: #857C88;
+  --color-muted-soft: #9B93A2;
+  --color-border: #F1D6E2;
+  --color-border-soft: #F6D3E2;
+  --color-border-strong: #E7C4D6;
+  --color-pink: #E6398B;
+  --color-pink-deep: #C0186A;
+  --color-pink-pale: #F9C9DE;
+  --color-pink-glow: #FBE0EE;
+  --color-green-deep: #2E4B3C;
+  --color-green-soft: #2E7D5B;
+  --color-green-tint: #EAF7EF;
+  --color-line: #06C755;
+  --color-gold: #F5A623;
+  --color-dark: #231B29;
+  --color-dark-soft: #3A2F42;
+
+  --font-heading: var(--font-prompt), sans-serif;
+  --font-body: var(--font-noto-sans-thai), var(--font-prompt), sans-serif;
+  --font-display: var(--font-cormorant), serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--color-pink-deep);
+}
+a:hover {
+  color: var(--color-pink);
+}
+
+::selection {
+  background: var(--color-pink-pale);
+  color: #7A0E42;
+}
+
+@keyframes npFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+@keyframes npFloat2 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+@keyframes npPulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 14px 34px rgba(196,24,106,.30); }
+  50% { transform: scale(1.025); box-shadow: 0 18px 44px rgba(196,24,106,.42); }
+}
+
+.animate-float {
+  animation: npFloat 7s ease-in-out infinite;
+}
+.animate-float2 {
+  animation: npFloat2 9s ease-in-out infinite;
+}
+.animate-pulse-cta {
+  animation: npPulse 2.4s ease-in-out infinite;
+}
