@@ -1,4 +1,5 @@
 import { LINE_URL } from "@/lib/content";
+import LineLogo from "@/components/LineLogo";
 
 export default function ContactPage() {
   return (
@@ -18,10 +19,8 @@ export default function ContactPage() {
             rel="noopener"
             className="flex items-center gap-4 rounded-[18px] border border-[#BEE9CE] bg-[#EAFBF0] p-5.5"
           >
-            <div className="flex h-13 w-13 flex-none items-center justify-center rounded-2xl bg-line text-[22px]">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff">
-                <path d="M12 2C6.48 2 2 5.64 2 10.13c0 4.02 3.55 7.39 8.35 8.03.32.07.77.21.88.49.1.25.06.64.03.9l-.14.85c-.04.25-.2.98.86.53s5.72-3.37 7.8-5.77C21.13 13.4 22 11.86 22 10.13 22 5.64 17.52 2 12 2z"></path>
-              </svg>
+            <div className="flex h-13 w-13 flex-none items-center justify-center rounded-2xl bg-line">
+              <LineLogo className="h-7 w-7" variant="onGreen" />
             </div>
             <div>
               <div className="font-heading text-lg font-semibold text-ink">LINE Official</div>

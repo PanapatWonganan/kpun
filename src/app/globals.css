@@ -40,11 +40,17 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-a {
-  color: var(--color-pink-deep);
-}
-a:hover {
-  color: var(--color-pink);
+/* Default link color placed in @layer base so Tailwind's text-* utilities
+   (which live in @layer utilities, a higher layer) always override it.
+   Without the layer, this unlayered rule beat every text color utility and
+   forced button text to pink. */
+@layer base {
+  a {
+    color: var(--color-pink-deep);
+  }
+  a:hover {
+    color: var(--color-pink);
+  }
 }
 
 ::selection {

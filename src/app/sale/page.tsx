@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ReviewCard from "@/components/ReviewCard";
 import CountdownTimer from "@/components/CountdownTimer";
+import LineLogo from "@/components/LineLogo";
 import { LINE_URL } from "@/lib/content";
 import {
   SALE_HERO_TICKS,
@@ -15,12 +16,8 @@ import {
   SALE_FAQS,
 } from "@/lib/content";
 
-function LineIcon({ className = "" }: { className?: string }) {
-  return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className={className}>
-      <path d="M12 2C6.48 2 2 5.64 2 10.13c0 4.02 3.55 7.39 8.35 8.03.32.07.77.21.88.49.1.25.06.64.03.9l-.14.85c-.04.25-.2.98.86.53s5.72-3.37 7.8-5.77C21.13 13.4 22 11.86 22 10.13 22 5.64 17.52 2 12 2z"></path>
-    </svg>
-  );
+function LineIcon({ className = "h-[1.15em] w-[1.15em]" }: { className?: string }) {
+  return <LineLogo className={className} variant="onGreen" />;
 }
 
 export default function SalePage() {
